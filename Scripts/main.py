@@ -6,7 +6,7 @@ from polarity import positive_words, negative_words, polarity
 from calculations import avg_sentencelength, avg_words_per_sentence, word_count, avg_word_length, subjectivity_score, complex_words, fog_index
 
 
-def main(url_id, url):
+def main(url_id: str, url: str) -> dict:
     # Initialize the variables
     POSITIVE_WORDS = int(0)
     NEGATIVE_WORDS = int(0)
@@ -49,7 +49,7 @@ def main(url_id, url):
     AVG_SENTENCE_LENGTH = avg_sentencelength(sentences)
 
     # Calculate the average words per sentence
-    AVG_WORDS_PER_SENTENCE = avg_words_per_sentence(words, sentences)
+    AVG_WORDS_PER_SENTENCE = avg_words_per_sentence(sentences)
 
     # Calculate the word count
     WORD_COUNT = word_count(words)

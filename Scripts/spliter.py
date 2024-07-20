@@ -1,4 +1,4 @@
-def splitter(text):
+def splitter(text: str) -> tuple[list[str], list[str]]:
     # Split the text into sentences
     sentences = text.split('.')
     

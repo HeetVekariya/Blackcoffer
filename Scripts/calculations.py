@@ -8,7 +8,7 @@ except LookupError:
     print("Downloading cmudict...")
     nltk.download('cmudict')
 
-def avg_sentencelength(sentences):
+def avg_sentencelength(sentences: list[str]) -> float:
     total_length = 0
 
     for sentence in sentences:
@@ -19,7 +19,7 @@ def avg_sentencelength(sentences):
     
     return total_length / len(sentences)
 
-def avg_words_per_sentence(words, sentences):
+def avg_words_per_sentence( sentences: list[str]) -> float:
     total_words = 0
 
     for sentence in sentences:
@@ -30,10 +30,10 @@ def avg_words_per_sentence(words, sentences):
     
     return total_words / len(sentences)
 
-def word_count(words):
+def word_count(words: list[str]) -> int:
     return len(words)
 
-def avg_word_length(words):
+def avg_word_length(words: list[str]) -> float:
     total_length = 0
 
     for word in words:
@@ -50,7 +50,7 @@ def subjectivity_score(positive_words: int, negative_words: int, total_words: in
     
     return (positive_words + negative_words) / float(total_words)
 
-def complex_words(words):
+def complex_words(words: list[str]) -> tuple[int, float, float]:
     # Load the CMU Pronouncing Dictionary
     d = cmudict.dict()
 
