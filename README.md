@@ -32,5 +32,6 @@
 
 # Set up
 
+- Extract the provided zip file (Blackcoffer.zip)
 - Install all the required dependacies from `requirements.txt` .
 - Run main.py from Scripts folder.
